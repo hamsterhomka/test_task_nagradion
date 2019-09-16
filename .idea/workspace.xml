@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5943597-59bf-4f80-add2-441aa8452945" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Task_1/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1/fetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_1/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/fetcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/lib/index.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/lib/index.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/node_modules/node-fetch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1/services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/Table.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/Videos.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568653152392</updated>
-      <workItem from="1568653155613" duration="16685000" />
+      <workItem from="1568653155613" duration="17194000" />
     </task>
     <servers />
   </component>
