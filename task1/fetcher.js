@@ -32,7 +32,7 @@ async function fetcher(urls) {
     initialFetchUrls.forEach(fetchUrlNext);
 
     function fetchUrlNext(url) {
-      fetchUrl(url, new Date())
+      fetchUrl(url)
         .then((responseTimeItem) => {
           responseTimeItems.push(responseTimeItem);
 
@@ -49,7 +49,8 @@ async function fetcher(urls) {
   });
 }
 
-function fetchUrl(url, startTime) {
+function fetchUrl(url) {
+  const startTime = new Date();
   return fetch(url)
     .then(() => {
       const endTime = new Date();
