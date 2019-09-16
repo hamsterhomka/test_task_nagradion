@@ -1,12 +1,13 @@
-'use strict'
+'use strict';
 
 let urls = require('./services');
+const fetch = require('node-fetch');
 
-(function main() {
-    const results = fetcher(urls) || [];
-    results.forEach(result => {
-        console.log(result.url, ' - ', result.responseTime);
-    });
+(async function main() {
+  const results = await fetcher(urls) || [];
+  results.forEach(result => {
+    console.log(result.url, ' - ', result.responseTime);
+  });
 })();
 
 /**
@@ -18,10 +19,48 @@ let urls = require('./services');
 
 /*
  * @param {string[]} urls - services urls
- * @returns {Result[]} results 
+ * @returns {Result[]} results
  */
-function fetcher(urls) {
-    /* Ваш код здесь */
+
+async function fetcher(urls) {
+  const MAX_CONNECTIONS = 3;
+  const initialFetchUrls = urls.slice(0, MAX_CONNECTIONS);
+  const secondaryFetchUrls = urls.slice(MAX_CONNECTIONS);
+  const responseTimeItems = [];
+
+  return new Promise((resolve) => {
+    initialFetchUrls.forEach(fetchUrlNext);
+
+    function fetchUrlNext(url) {
+      fetchUrl(url, new Date())
+        .then((responseTimeItem) => {
+          responseTimeItems.push(responseTimeItem);
+
+          if(responseTimeItems.length === urls.length) {
+            responseTimeItems.sort((a, b) => a.responseTime - b.responseTime);
+            resolve(responseTimeItems);
+          }
+
+          if(secondaryFetchUrls.length) {
+            fetchUrlNext(secondaryFetchUrls.shift(), new Date());
+          }
+        });
+    }
+  });
 }
+
+function fetchUrl(url, startTime) {
+  return fetch(url)
+    .then(() => {
+      const endTime = new Date();
+      const responseTime = endTime - startTime;
+      return {url, responseTime};
+    })
+    .catch((error) => {
+        console.error(error.message);
+        return {url};
+      });
+}
+
 
 

@@ -7,7 +7,7 @@ const services = [
     'https://en.wikipedia.org',
     'https://youtube.com',
     'https://github.com',
-    'https://habr.com'
+    'https://habr.com',
 ];
 
 module.exports = services;
