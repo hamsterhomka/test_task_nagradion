@@ -42,7 +42,7 @@ async function fetcher(urls) {
           }
 
           if(secondaryFetchUrls.length) {
-            fetchUrlNext(secondaryFetchUrls.shift(), new Date());
+            fetchUrlNext(secondaryFetchUrls.shift());
           }
         });
     }
